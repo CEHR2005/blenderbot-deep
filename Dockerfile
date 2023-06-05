@@ -8,4 +8,5 @@ WORKDIR /app
 COPY . /app
 
 # Установите необходимые библиотеки
+RUN apt-get update && apt-get install -y git
 RUN pip install --no-cache-dir transformers torch
