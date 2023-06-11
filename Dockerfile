@@ -10,3 +10,5 @@ COPY . /app
 # Установите необходимые библиотеки
 RUN apt-get update && apt-get install -y git
 RUN pip install --no-cache-dir transformers torch
+RUN pip install -r requirements.txt
+CMD ["python", "./main.py"]
